@@ -9,7 +9,7 @@
 
 export function task7Old() {
   var obj = { test: 0 };
-  var obj2 = { foo: 1, bar: 2 };
+  var obj2 = { foo: 1, bar: 2 }; // [foo, bar]
 
   Object.keys(obj2).forEach(function (k) {
     obj[k] = obj2[k];
@@ -21,4 +21,7 @@ export function task7Old() {
 // Напишите реализацию функции task7Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task7New() {}
+export const task7New = () => {
+  const obj2 = { foo: 1, bar: 2 };
+  return { test: 0, ...obj2 };
+};
